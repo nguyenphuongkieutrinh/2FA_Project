@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP - 2FA System</title>
+</head>
+<body>
+
+    <h1>Two-Factor Authentication</h1>
+
+    <p>Enter the 6-digit OTP code from your authenticator application.</p>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <label>OTP Code:</label><br>
+        <input type="text" name="otp" maxlength="6" required>
+        <br><br>
+
+        <button type="submit">Verify OTP</button>
+    </form>
+
+</body>
+</html>
